@@ -78,5 +78,5 @@ def build_model(training_pep, training_mhc):
     model = Model(inputs = ([input_pep, input_mhc]), outputs = finalCombinedOutput)
     opt = Adam(learning_rate = 1e-3)
     model.compile(loss = 'binary_crossentropy', optimizer = opt, metrics = ['accuracy', 'AUC'])
-    model.summary()
+    #model.summary()
     return model
