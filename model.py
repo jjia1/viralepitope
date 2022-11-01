@@ -19,7 +19,7 @@ from tensorflow.keras import (
 )
 from attention_layer import Attention, attention_flatten
 def build_model(training_pep, training_mhc):
-    filters, kernel = 128, 3
+    filters, kernel = 256, 5
     input_pep = Input(shape=(np.shape(training_pep[0])), name = 'peptide')
 
     conv_pep = Conv1D(filters = filters, kernel_size = kernel, activation = 'relu', 
